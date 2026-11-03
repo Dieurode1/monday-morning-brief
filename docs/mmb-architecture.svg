@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 448" role="img" aria-label="Monday Morning Brief architecture: sample store data flows into Snowflake, dbt builds the weekly comparison, Amazon Bedrock writes the brief, a number check verifies it, and Slack delivers it.">
+<title>Monday Morning Brief architecture</title>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}.t{fill:#f0f6fc;font-size:24px;font-weight:700}.s{fill:#8b949e;font-size:15px}.n{fill:#f0f6fc;font-size:18px;font-weight:600}.b{fill:#8b949e;font-size:13.5px}.w{fill:#ff7b72;font-size:13px;font-weight:600}.c{fill:#0d1117;font-size:13px;font-weight:700;text-anchor:middle}@media (prefers-reduced-motion:reduce){.m{display:none}}</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#484f58"/></marker></defs>
+<rect x="1" y="1" width="958" height="446" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text class="t" x="40" y="52">How the Monday Morning Brief works</text>
+<text class="s" x="40" y="80">Snowflake and dbt calculate every number. Bedrock only writes the words.</text>
+<path d="M300 170.0 H350" fill="none" stroke="#484f58" stroke-width="2" marker-end="url(#a)"/>
+<path d="M610 170.0 H660" fill="none" stroke="#484f58" stroke-width="2" marker-end="url(#a)"/>
+<path d="M790.0 228 V292" fill="none" stroke="#484f58" stroke-width="2" marker-end="url(#a)"/>
+<path d="M660 350.0 H610" fill="none" stroke="#484f58" stroke-width="2" marker-end="url(#a)"/>
+<path d="M350 350.0 H300" fill="none" stroke="#484f58" stroke-width="2" marker-end="url(#a)"/>
+<g><rect x="40" y="112" width="260" height="116" rx="12" fill="#161b22" stroke="#3776AB" stroke-opacity=".55" stroke-width="1.5"/>
+<rect class="m" x="40" y="112" width="260" height="116" rx="12" fill="#3776AB" fill-opacity=".14" stroke="#3776AB" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.025;0.0542;0.1417;1"/></rect>
+<circle cx="70" cy="141" r="13" fill="#3776AB"/><text class="c" x="70" y="146">1</text>
+<text class="n" x="92" y="147">Sample store data</text>
+<text class="b" x="60" y="174">Orders, refunds, ad spend,</text>
+<text class="b" x="60" y="193">plus a messy supplier tracker</text>
+</g>
+<g><rect x="350" y="112" width="260" height="116" rx="12" fill="#161b22" stroke="#29B5E8" stroke-opacity=".55" stroke-width="1.5"/>
+<rect class="m" x="350" y="112" width="260" height="116" rx="12" fill="#29B5E8" fill-opacity=".14" stroke="#29B5E8" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.1679;0.197;0.2845;1"/></rect>
+<circle cx="380" cy="141" r="13" fill="#29B5E8"/><text class="c" x="380" y="146">2</text>
+<text class="n" x="402" y="147">Snowflake</text>
+<text class="b" x="370" y="174">Stores the raw tables</text>
+<text class="b" x="370" y="193">in one warehouse</text>
+</g>
+<g><rect x="660" y="112" width="260" height="116" rx="12" fill="#161b22" stroke="#FF694B" stroke-opacity=".55" stroke-width="1.5"/>
+<rect class="m" x="660" y="112" width="260" height="116" rx="12" fill="#FF694B" fill-opacity=".14" stroke="#FF694B" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.3107;0.3399;0.4274;1"/></rect>
+<circle cx="690" cy="141" r="13" fill="#FF694B"/><text class="c" x="690" y="146">3</text>
+<text class="n" x="712" y="147">dbt</text>
+<text class="b" x="680" y="174">Compares last week to prior</text>
+<text class="b" x="680" y="193">weeks in mart_weekly_brief</text>
+</g>
+<g><rect x="660" y="292" width="260" height="116" rx="12" fill="#161b22" stroke="#FF9900" stroke-opacity=".55" stroke-width="1.5"/>
+<rect class="m" x="660" y="292" width="260" height="116" rx="12" fill="#FF9900" fill-opacity=".14" stroke="#FF9900" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.4536;0.4827;0.5702;1"/></rect>
+<circle cx="690" cy="321" r="13" fill="#FF9900"/><text class="c" x="690" y="326">4</text>
+<text class="n" x="712" y="327">Amazon Bedrock</text>
+<text class="b" x="680" y="354">Turns verified facts into</text>
+<text class="b" x="680" y="373">a plain-English brief</text>
+</g>
+<g><rect x="350" y="292" width="260" height="116" rx="12" fill="#161b22" stroke="#3FB950" stroke-opacity=".55" stroke-width="1.5"/>
+<rect class="m" x="350" y="292" width="260" height="116" rx="12" fill="#3FB950" fill-opacity=".14" stroke="#3FB950" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.5964;0.6256;0.7131;1"/></rect>
+<circle cx="380" cy="321" r="13" fill="#3FB950"/><text class="c" x="380" y="326">5</text>
+<text class="n" x="402" y="327">Number check</text>
+<text class="b" x="370" y="354">Matches every number in</text>
+<text class="b" x="370" y="373">the brief to Snowflake</text>
+<text class="w" x="370" y="392">Any mismatch: nothing posts</text>
+</g>
+<g><rect x="40" y="292" width="260" height="116" rx="12" fill="#161b22" stroke="#E01E5A" stroke-opacity=".55" stroke-width="1.5"/>
+<rect class="m" x="40" y="292" width="260" height="116" rx="12" fill="#E01E5A" fill-opacity=".14" stroke="#E01E5A" stroke-width="2.5" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.7393;0.7685;0.856;1"/></rect>
+<circle cx="70" cy="321" r="13" fill="#E01E5A"/><text class="c" x="70" y="326">6</text>
+<text class="n" x="92" y="327">Slack</text>
+<text class="b" x="60" y="354">Delivers three findings</text>
+<text class="b" x="60" y="373">and what to do next</text>
+</g>
+<circle class="m" r="6" fill="#3776AB" opacity="0"><animateMotion path="M300 170.0 H350" dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.1054;0.1637;1"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.1054;0.1679"/></circle>
+<circle class="m" r="6" fill="#29B5E8" opacity="0"><animateMotion path="M610 170.0 H660" dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.2482;0.3065;1"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.2482;0.3107"/></circle>
+<circle class="m" r="6" fill="#FF694B" opacity="0"><animateMotion path="M790.0 228 V292" dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.3911;0.4494;1"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.3911;0.4536"/></circle>
+<circle class="m" r="6" fill="#FF9900" opacity="0"><animateMotion path="M660 350.0 H610" dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.5339;0.5923;1"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.5339;0.5964"/></circle>
+<circle class="m" r="6" fill="#3FB950" opacity="0"><animateMotion path="M350 350.0 H300" dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.6768;0.7351;1"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.6768;0.7393"/></circle>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 600" role="img" aria-label="Target Monday Morning Brief built from fictional sample data, showing three findings and recommended actions.">
+<title>Target Monday Morning Brief</title>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}.t{fill:#f0f6fc;font-size:22px;font-weight:700}.s{fill:#8b949e;font-size:14px}.h{fill:#f0f6fc;font-size:17px;font-weight:600}.b{fill:#c9d1d9;font-size:14.5px}.d{fill:#3fb950;font-size:14.5px;font-weight:600}.f{fill:#8b949e;font-size:13px}.tag{fill:#d29922;font-size:12px;font-weight:700;text-anchor:middle}
+.r{animation-duration:12s;animation-iteration-count:infinite;animation-timing-function:ease-out}
+.r1{animation-name:a1}.r2{animation-name:a2}.r3{animation-name:a3}
+@keyframes a1{0%,5%{opacity:0;transform:translateY(10px)}11%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes a2{0%,20%{opacity:0;transform:translateY(10px)}26%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes a3{0%,35%{opacity:0;transform:translateY(10px)}41%,92%{opacity:1;transform:none}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.r{animation:none}}</style>
+<rect x="1" y="1" width="858" height="598" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text class="t" x="36" y="50">Monday Morning Brief</text>
+<text class="s" x="36" y="75">Week of Oct 26, 2026 · Fictional sample data</text>
+<rect x="710" y="32" width="114" height="26" rx="13" fill="#d29922" fill-opacity=".14" stroke="#d29922"/>
+<text class="tag" x="767" y="49">TARGET OUTPUT</text>
+<line x1="36" y1="98" x2="824" y2="98" stroke="#30363d"/>
+<g class="r r1"><rect x="36" y="118" width="788" height="138" rx="12" fill="#161b22"/><rect x="36" y="118" width="5" height="138" rx="2.5" fill="#FF9900"/>
+<text class="h" x="60" y="150">Best-seller sold out</text><text class="b" x="60" y="177">The Summit Burr Grinder sold out Oct 25, and revenue fell 20.9% to $43,586.</text><text class="b" x="60" y="200">The next 300 units arrive Nov 22, leaving about $43K in sales at risk.</text><text class="d" x="60" y="232">Do this: Promote an in-stock grinder and try to expedite the order.</text></g>
+<g class="r r2"><rect x="36" y="268" width="788" height="138" rx="12" fill="#161b22"/><rect x="36" y="268" width="5" height="138" rx="2.5" fill="#29B5E8"/>
+<text class="h" x="60" y="300">Meta spend rose, new customers didn&#8217;t</text><text class="b" x="60" y="327">Spend rose 27.2% to $7,162, while new customers stayed flat at 229.</text><text class="b" x="60" y="350">The extra money bought clicks, not more first-time buyers.</text><text class="d" x="60" y="382">Do this: Review the added spend before renewing it.</text></g>
+<g class="r r3"><rect x="36" y="418" width="788" height="138" rx="12" fill="#161b22"/><rect x="36" y="418" width="5" height="138" rx="2.5" fill="#E01E5A"/>
+<text class="h" x="60" y="450">Travel mug refunds spiked</text><text class="b" x="60" y="477">Refunds jumped from about 2 a week to 52, and 51 cite a leaking lid.</text><text class="b" x="60" y="500">Total refunds doubled to $3,133.</text><text class="d" x="60" y="532">Do this: Pause mug promotions and inspect the lid.</text></g>
+</svg>

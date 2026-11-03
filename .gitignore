@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Generated sample data
+data/raw/
+
+# Python
+.venv/
+__pycache__/
+
+# dbt
+target/
+logs/
+dbt_packages/
+
+# Mac
+.DS_Store

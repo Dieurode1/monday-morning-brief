@@ -269,21 +269,32 @@ def build_ad_spend(rng):
     return pd.DataFrame(records)
 
 
-def build_supplier_lead_times(rng, products):
-    """Stands in for the spreadsheet a brand keeps outside its store tools."""
-    records = []
-    for product in products.itertuples(index=False):
-        is_grinder = product.product_id == GRINDER_ID
-        records.append(
-            {
-                "product_id": product.product_id,
-                "supplier": product.supplier,
-                "lead_time_days": 42 if is_grinder else int(rng.choice([14, 21, 28, 35])),
-                "units_on_order": 300 if is_grinder else 0,
-                "next_shipment_eta": GRINDER_NEXT_SHIPMENT if is_grinder else "",
-            }
-        )
-    return pd.DataFrame(records)
+def build_supplier_lead_times():
+    """A hand-kept tracker: no product IDs, mixed formats, and blank cells."""
+    columns = ["item", "vendor", "lead_time", "on_order", "next_eta", "notes"]
+    rows = [
+        ("Summit Grinder - Blk", "Kessler Precision Inc.", "6 wks", "300", "11/22/26", "PO went in late"),
+        ("Drift Mug (Travel)", "Harbor Goods", "3 weeks", "0", "", ""),
+        ("Pour Over - Glass", "Northline Glass", "21 days", "", "", ""),
+        ("French Press, Steel", "Harbor Goods Supply", "4 wks", "0", "", ""),
+        ("Gooseneck Ktl", "Kessler Precision Inc.", "5 wks", "50 units", "Nov 14", "partial ship"),
+        ("Drip Scale", "KESSLER PRECISION", "4 weeks", "0", "", ""),
+        ("Filters (100ct)", "Northline Glass", "14 days", "0", "", ""),
+        ("House Blend 12 oz", "Red Clay Roasters", "2 wks", "120", "2026-11-09", ""),
+        ("Decaf SW 12oz", "Red Clay", "2 wks", "", "", ""),
+        ("Single Origin 12 oz", "Red Clay Roasters", "14 days", "0", "", ""),
+        ("Stoneware Mugs - Set", "Harbor Goods", "5 wks", "0", "", ""),
+        ("Tamper (Espresso)", "Kessler Precision Inc.", "3 wks", "0", "", ""),
+        ("Hand Grinder - Travel", "Kessler Precision", "6 weeks", "40", "12/1/26", ""),
+        ("Cold Brew Mkr", "Northline Glass", "28 days", "0", "", ""),
+        ("Canister, Vacuum", "Harbor Goods Supply", "4 wks", "", "TBD", "waiting on quote"),
+        ("Milk Frother - Electric", "Kessler Precision Inc.", "5 wks", "0", "", ""),
+        ("Grinder Cleaning Kit", "Kessler Precision", "2 wks", "0", "", ""),
+        ("Barista Gift Set", "Harbor Goods", "6 wks", "0", "", ""),
+        ("Sampler Box - Roaster", "Red Clay", "2 wks", "0", "", ""),
+        ("Compact Press", "Northline Glass", "3 weeks", "0", "", ""),
+    ]
+    return pd.DataFrame(rows, columns=columns)
 
 
 def print_summary(orders, lines, refunds, ad_spend, inventory):
@@ -330,7 +341,7 @@ def main():
     orders, lines, inventory = simulate_store(rng, products)
     refunds = build_refunds(rng, orders, lines)
     ad_spend = build_ad_spend(rng)
-    supplier_lead_times = build_supplier_lead_times(rng, products)
+    supplier_lead_times = build_supplier_lead_times()
 
     tables = {
         "products": products.drop(columns="weight"),

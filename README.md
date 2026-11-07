@@ -56,7 +56,7 @@ The supplier tracker is deliberately messy. It has no product IDs, and its names
 - [x] Build the sample data generator
 - [x] Add the messy supplier tracker
 - [x] Load the data into Snowflake
-- [ ] Build the dbt models
+- [x] Build the dbt models
 - [ ] Generate the brief with Amazon Bedrock
 - [ ] Add the number check
 - [ ] Deliver the brief to Slack

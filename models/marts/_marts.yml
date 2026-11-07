@@ -1,0 +1,17 @@
+# Tests for the brief's fact table.
+# Each finding needs a unique ID so the number check can point to exactly which fact a figure came from.
+version: 2
+
+models:
+  - name: mart_weekly_brief
+    description: One row per finding for the latest full week. The only facts Bedrock is allowed to use.
+    columns:
+      - name: fact_id
+        tests: [unique, not_null]
+      - name: section
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['store_totals', 'stockout', 'refund_spike']
+      - name: this_week
+        tests: [not_null]

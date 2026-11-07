@@ -55,7 +55,7 @@ The supplier tracker is deliberately messy. It has no product IDs, and its names
 - [x] Set up the repository and Python project
 - [x] Build the sample data generator
 - [x] Add the messy supplier tracker
-- [ ] Load the data into Snowflake
+- [x] Load the data into Snowflake
 - [ ] Build the dbt models
 - [ ] Generate the brief with Amazon Bedrock
 - [ ] Add the number check
@@ -69,6 +69,7 @@ The sample data step works today. You'll need [uv](https://docs.astral.sh/uv/) i
 ```bash
 uv sync
 uv run python data_generator/generate_data.py
+uv run python snowflake/load_raw.py
 ```
 
 This creates seven CSV files in `data/raw/` and prints a weekly summary.

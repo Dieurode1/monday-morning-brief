@@ -1,0 +1,26 @@
+# Tests for the cleaned supplier tracker.
+# These catch the two ways this messy file can go wrong: an item name with no
+# product match, or an incoming shipment whose date couldn't be read.
+version: 2
+
+models:
+  - name: stg_supplier_lead_times
+    description: The hand-kept supplier tracker, matched to products and converted to clean types.
+    columns:
+      - name: product_id
+        description: Missing here means an item name has no match in supplier_item_map.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id
+      - name: lead_time_days
+        tests: [not_null]
+      - name: next_shipment_eta
+        description: Every item with units on order must have a readable arrival date.
+        tests:
+          - not_null:
+              config:
+                where: "units_on_order > 0"

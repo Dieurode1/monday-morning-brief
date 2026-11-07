@@ -1,0 +1,13 @@
+# Describes and tests the seed files.
+# supplier_item_map is a small hand-confirmed lookup: each item name exactly as
+# it appears in the supplier tracker, matched to the store's product ID.
+version: 2
+
+seeds:
+  - name: supplier_item_map
+    description: Links each item name in the supplier tracker to a store product ID. Confirmed once by hand.
+    columns:
+      - name: item_name
+        tests: [unique, not_null]
+      - name: product_id
+        tests: [unique, not_null]

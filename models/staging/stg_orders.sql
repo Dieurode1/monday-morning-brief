@@ -1,3 +1,6 @@
+-- One row per order. Converts the order time to a timestamp and a date,
+-- the first-order flag to true or false, and dollar amounts to numbers.
+
 select
     order_id,
     to_timestamp_ntz(order_ts) as ordered_at,

@@ -1,3 +1,6 @@
+# Descriptions and tests for the staging models.
+# Tests check that IDs are present and unique, that orders, products, and refunds link up,
+# and that ad spend only comes from Meta or Google.
 version: 2
 
 models:

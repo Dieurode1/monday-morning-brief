@@ -1,3 +1,5 @@
+-- One row per product on an order. Converts quantity and dollar amounts to numbers.
+
 select
     order_line_id,
     order_id,

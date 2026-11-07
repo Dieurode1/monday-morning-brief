@@ -1,3 +1,5 @@
+# dbt project settings: names the project, points to the Snowflake connection profile,
+# and sends staging models to views in STAGING and the mart to a table in MARTS.
 name: monday_morning_brief
 version: "1.0.0"
 profile: monday_morning_brief

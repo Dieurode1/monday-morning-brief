@@ -1,3 +1,5 @@
+-- One row per refunded order line. Converts the refund date and amount to proper types.
+
 select
     refund_id,
     order_line_id,

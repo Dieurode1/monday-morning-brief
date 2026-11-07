@@ -1,3 +1,5 @@
+# Declares the raw tables loaded by snowflake/load_raw.py so staging models can use them.
+# Every column in these tables is text; the staging models convert them to proper types.
 version: 2
 
 sources:

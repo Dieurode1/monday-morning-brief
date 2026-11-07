@@ -1,3 +1,5 @@
+-- One row per product. Converts prices and costs from text to numbers.
+
 select
     product_id,
     sku,

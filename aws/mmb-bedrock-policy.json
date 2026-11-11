@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "UseTheKimiInferenceProfile",
+      "Effect": "Allow",
+      "Action": "bedrock:InvokeModel*",
+      "Resource": "arn:aws:bedrock:us-east-1:<AWS_ACCOUNT_ID>:inference-profile/us.moonshotai.kimi-k3.1"
+    },
+    {
+      "Sid": "ReachKimiOnlyThroughTheProfile",
+      "Effect": "Allow",
+      "Action": "bedrock:InvokeModel*",
+      "Resource": "arn:aws:bedrock:*::foundation-model/moonshotai.kimi-k3.1",
+      "Condition": {
+        "StringLike": {
+          "bedrock:InferenceProfileArn": "arn:aws:bedrock:us-east-1:<AWS_ACCOUNT_ID>:inference-profile/us.moonshotai.kimi-k3.1"
+        }
+      }
+    }
+  ]
+}
